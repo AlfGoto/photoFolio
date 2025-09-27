@@ -1,31 +1,24 @@
-import fs from "fs";
-import path from "path";
 import Image from "next/image";
-
-async function getImages() {
-  const dir = path.join(process.cwd(), "public", "portfolio");
-  const files = fs.readdirSync(dir);
-
-  return files
-    .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-    .map((file) => `/portfolio/${file}`);
-}
+import { data } from "./data"
+import Description from "@/components/description";
 
 export default async function Page() {
-  const images = await getImages();
-
   return (
-    <main className="flex flex-col items-center">
-      {images.map((src, i) => (
-        <div key={i} className="w-full max-w-3xl">
+    <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
+      {data.map(({ file, title, place }, i) => (
+        <div
+          key={i}
+          className="flex justify-center snap-center relative"
+        >
           <Image
-            src={src}
-            alt={`portfolio-${i}`}
-            width={1200}
-            height={800}
-            className="shadow-lg w-full h-auto object-cover"
+            src={`/portfolio/${file}`}
+            alt={`portfolio-${title}`}
+            width={800}
+            height={600}
             loading="lazy"
+            className="z-50"
           />
+          <Description title={title} place={place} />
         </div>
       ))}
     </main>
