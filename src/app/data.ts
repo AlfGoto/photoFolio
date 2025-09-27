@@ -6,7 +6,7 @@ export const data = [
   },
   {
     title: "Hello",
-    desc: "Welcome to my little portfolio, this is made for mobile user, take your time to swipe throught my favorites pics !",
+    desc: "Welcome to my little portfolio, this is made for mobile user, take your time to swipe through my favorites pics !",
     file: "BLANK"
   },
   {
