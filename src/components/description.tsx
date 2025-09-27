@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Description({ title, place }: { title: string, place: string }) {
+export default function Description({ title, desc }: { title: string, desc: string }) {
   const [show, setShow] = useState(false);
 
   return <div
@@ -10,7 +10,7 @@ export default function Description({ title, place }: { title: string, place: st
     onClick={() => { setShow(!show) }
     }>
     <p>{title}</p>
-    <p className="text-xs opacity-80">{place}</p>
+    <p className="text-xs opacity-80">{desc}</p>
   </div >
 }
 

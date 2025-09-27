@@ -1,27 +1,32 @@
 export const data = [
   {
     title: "Iliona",
-    place: "Jardin des plantes",
+    desc: "Jardin des plantes",
     file: "Iliona (15).jpg"
   },
   {
+    title: "Hello",
+    desc: "Welcome to my little portfolio, this is made for mobile user, take your time to swipe throught my favorites pics !",
+    file: "BLANK"
+  },
+  {
     title: "Mathilde",
-    place: "La Défense",
+    desc: "La Défense",
     file: "Mathilde (13).jpg"
   },
   {
     title: "Anais",
-    place: "Vincenne",
+    desc: "Vincenne",
     file: "sirehsn (3).jpg"
   },
   {
     title: "Anais et Eloise",
-    place: "Vincenne",
+    desc: "Vincenne",
     file: "sirehsn & dameeljo (1).jpg"
   },
   {
     title: "Zoé",
-    place: "Le Louvre",
+    desc: "Le Louvre",
     file: "ZozoLouvres (21).jpg"
   },
 ]
